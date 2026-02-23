@@ -433,3 +433,34 @@ input {
   font-size: 1.1rem;
   margin-top: 20px;
 }
+/* --- Real-Time Adaptive UI --- */
+.timer-box {
+  background: #ecf0f1;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+}
+
+.timer-box.danger {
+  background: #ffdddd;
+  color: #c0392b;
+  animation: pulse-danger 1s infinite;
+}
+
+.adaptation-msg {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #2c3e50;
+  max-width: 80%;
+  line-height: 1.4;
+}
+
+@keyframes pulse-danger {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); box-shadow: 0 0 10px rgba(192, 57, 43, 0.4); }
+  100% { transform: scale(1); }
+}
